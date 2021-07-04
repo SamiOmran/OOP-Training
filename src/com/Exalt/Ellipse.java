@@ -17,7 +17,6 @@ public class Ellipse extends ClosedShape {
         this.minor = minor;
     }
 
-
     public Point getFocus1() {
         return focus1;
     }
@@ -55,4 +54,38 @@ public class Ellipse extends ClosedShape {
     void draw() {
         System.out.println("This is ellipse class");
     }
+
+    @Override
+    public void moveUp(int m) {
+        this.focus1.setY(this.focus1.getY() + m);
+        this.focus2.setY(this.focus2.getY() + m);
+    }
+
+    @Override
+    public void moveDown(int m) {
+        this.focus1.setY(this.focus1.getY() - m);
+        this.focus2.setY(this.focus2.getY() - m);
+    }
+
+    @Override
+    public void moveLeft(int m) {
+        this.focus1.setX(this.focus1.getX() - m);
+        this.focus2.setX(this.focus2.getX() - m);
+    }
+
+    @Override
+    public void moveRight(int m) {
+        this.focus1.setX(this.focus1.getX() + m);
+        this.focus2.setX(this.focus2.getX() + m);
+    }
+
+    @Override
+    public void moveBy(int x, int y) {
+        this.focus1.setX(this.focus1.getX() + x);
+        this.focus2.setX(this.focus2.getX() + x);
+
+        this.focus1.setY(this.focus1.getY() + y);
+        this.focus2.setY(this.focus2.getY() + y);
+    }
 }
+
