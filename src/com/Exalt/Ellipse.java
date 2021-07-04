@@ -51,7 +51,7 @@ public class Ellipse extends ClosedShape {
     }
 
     @Override
-    void draw() {
+    public void draw() {
         System.out.println("This is ellipse class");
     }
 

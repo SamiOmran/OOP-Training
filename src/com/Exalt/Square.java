@@ -6,11 +6,30 @@ public class Square extends Rectangle {
     }
 
     public void update(Point upperCorner, int side) {
-
+        super.update(upperCorner, side, side);
     }
 
     public int getSide() {
+        return super.getHeight();
+    }
 
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public String toString() {
+        Point upperCorner = getPoint(1);
+        Point upperRight = getPoint(2);
+        Point lowerRight = getPoint(3);
+        Point lowerLeft = getPoint(4);
+
+        return "The Square vertices are: (" +
+                upperCorner.getX() + ", " + upperCorner.getY() + "), (" +
+                upperRight.getX()  + ", " + upperRight.getY()  + "), (" +
+                lowerRight.getX()  + ", " + lowerRight.getY()  + "), (" +
+                lowerLeft.getX()   + ", " + lowerLeft.getY()   + "), (" ;
     }
 
     @Override

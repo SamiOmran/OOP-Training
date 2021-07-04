@@ -1,6 +1,6 @@
 package com.Exalt;
 //import java.math.
-public class Line extends Shape{
+public class Line implements Shape{
     private Point begin;
     private Point end;
 
@@ -18,7 +18,7 @@ public class Line extends Shape{
     }
 
     @Override
-    void draw() {
+    public void draw() {
         System.out.println("This is line class");
     }
 }

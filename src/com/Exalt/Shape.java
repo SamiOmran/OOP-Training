@@ -1,6 +1,6 @@
 package com.Exalt;
 
-abstract public class Shape {
-    String name;
-    abstract void draw();
+interface Shape {
+    String name = "Some shape";
+    void draw();
 }

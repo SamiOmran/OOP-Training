@@ -29,7 +29,7 @@ public class Circle extends Ellipse {
     }
 
     @Override
-    void draw() {
+    public void draw() {
         System.out.println("This is circle class");
     }
 }

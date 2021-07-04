@@ -26,4 +26,15 @@ public class Point {
     void setY(int y) {
         this.y = y;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        Point secondPoint = (Point) obj;
+
+        if (this.x == secondPoint.x && this.y == secondPoint.y) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
