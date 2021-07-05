@@ -30,10 +30,11 @@ public class Rectangle extends Polygon {
 
     public int getWidth() {
         Point upperCorner = this.getPoint(1);
-        Point lowerLeft = this.getPoint(3);
+        Point lowerLeft = this.getPoint(4);
         int width = 0;
 
-        width = (int) Math.sqrt( Math.pow(upperCorner.getX() - lowerLeft.getX(), 2) + Math.pow(upperCorner.getY() - lowerLeft.getY(), 2));
+        width = (int) Line.calculateLength(upperCorner, lowerLeft);
+
         return width;
     }
 
@@ -42,7 +43,7 @@ public class Rectangle extends Polygon {
         Point upperRight = this.getPoint(2);
         int height = 0;
 
-        height = (int) Math.sqrt( Math.pow(upperCorner.getX() - upperRight.getX(), 2) + Math.pow(upperCorner.getY() - upperRight.getY(), 2));
+        height = (int) Line.calculateLength(upperCorner, upperRight);
         return height;
     }
 
@@ -57,7 +58,8 @@ public class Rectangle extends Polygon {
                 upperCorner.getX() + ", " + upperCorner.getY() + "), (" +
                 upperRight.getX()  + ", " + upperRight.getY()  + "), (" +
                 lowerRight.getX()  + ", " + lowerRight.getY()  + "), (" +
-                lowerLeft.getX()   + ", " + lowerLeft.getY()   + "), (" ;
+                lowerLeft.getX()   + ", " + lowerLeft.getY()   + "), "  +
+                ", height = "      + this.getHeight()+", width =  " + this.getWidth();
     }
 
     @Override
@@ -98,5 +100,16 @@ public class Rectangle extends Polygon {
     @Override
     public void moveBy(int x, int y) {
 
+    }
+
+    @Override
+    public float getPerimeter() {
+        int height = this.getHeight();
+        int width = this.getWidth();
+        int perimeter = 0;
+
+        perimeter = 2 * (width + height);
+
+        return perimeter;
     }
 }

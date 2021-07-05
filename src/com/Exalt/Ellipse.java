@@ -1,9 +1,5 @@
 package com.Exalt;
 
-import com.sun.deploy.pings.Pings;
-
-import java.nio.channels.Pipe;
-
 public class Ellipse extends ClosedShape {
     protected Point focus1;
     protected Point focus2;

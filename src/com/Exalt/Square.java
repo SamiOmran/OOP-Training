@@ -29,7 +29,8 @@ public class Square extends Rectangle {
                 upperCorner.getX() + ", " + upperCorner.getY() + "), (" +
                 upperRight.getX()  + ", " + upperRight.getY()  + "), (" +
                 lowerRight.getX()  + ", " + lowerRight.getY()  + "), (" +
-                lowerLeft.getX()   + ", " + lowerLeft.getY()   + "), (" ;
+                lowerLeft.getX()   + ", " + lowerLeft.getY()   + "),"   +
+                " length of it's sides "  + this.getSide();
     }
 
     @Override
@@ -55,5 +56,10 @@ public class Square extends Rectangle {
     @Override
     public void moveBy(int x, int y) {
         super.moveBy(x, y);
+    }
+
+    @Override
+    public float getPerimeter() {
+        return super.getPerimeter();
     }
 }

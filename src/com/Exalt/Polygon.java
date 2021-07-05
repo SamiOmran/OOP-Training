@@ -45,11 +45,6 @@ public class Polygon extends ClosedShape {
     }
 
     @Override
-    public float getPerimeter() {
-        return 0;
-    }
-
-    @Override
     public void moveUp(int m) {
 
     }
@@ -77,5 +72,10 @@ public class Polygon extends ClosedShape {
     @Override
     public void draw() {
         System.out.println("Polygon");
+    }
+
+    @Override
+    public float getPerimeter() {
+        return 0;
     }
 }
